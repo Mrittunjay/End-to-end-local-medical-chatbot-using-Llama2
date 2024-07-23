@@ -1,0 +1,5 @@
+ctransformers==0.2.5    # Need this library as we are running it on cpu as a quantized model
+sentence-transformers=2.2.2     # This library get hugging face models to create sentence embeddings
+pinecone-client     # Used to integrate pinecone vector database
+langchain==0.0.225  # Tools and utilities to design LLM model
+flask               # Used to create the frontend
