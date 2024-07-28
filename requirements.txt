@@ -1,5 +1,7 @@
 ctransformers==0.2.5    # Need this library as we are running it on cpu as a quantized model
 sentence-transformers==2.2.2     # This library get hugging face models to create sentence embeddings
 pinecone-client     # Used to integrate pinecone vector database
-langchain==0.0.225  # Tools and utilities to design LLM model
+# langchain==0.0.225  # WAS FACING MANY ISSUES WITH THIS VERSION WITH RETRIEVER
+langchain==0.1.10   # Retriever related issues got solved with langchain version above 0.1.0
+langchain_pinecone  # Tools for creating vector db
 flask               # Used to create the frontend
