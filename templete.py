@@ -22,6 +22,7 @@ list_dir = [
 # Creating all the files and folders in the above list
 for filepath in list_dir:
     filepath = Path(filepath)
+    
     # seperating directories and files from the file path
     directory, file = os.path.split(filepath)
 
@@ -31,7 +32,7 @@ for filepath in list_dir:
         logging.info(f"Created directory: {directory}")
     # Creating the file
     if not os.path.exists(filepath):
-        with open(file, 'w') as f:
+        with open(filepath, 'w') as f:
             pass
         logging.info(f"Created empty file: {file}")
     else:
