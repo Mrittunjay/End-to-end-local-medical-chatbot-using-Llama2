@@ -5,6 +5,7 @@ pinecone-client     # Used to integrate pinecone vector database
 langchain==0.1.10   # Retriever related issues got solved with langchain version above 0.1.0
 langchain_pinecone  # Tools for creating vector db
 flask               # Used to create the frontend
-google-api-core
-protoc_gen_openapiv2
-grpcio
+google-api-core     # Used for api request and response handling
+protoc_gen_openapiv2    # It’s part of the grpc-gateway project, which is used to expose gRPC services as RESTful APIs. Used for pinecone api.
+grpcio              # The project uses gRPC for communication between services or components, grpcio provides the necessary tools and protocols to implement and manage these communications.
+-e .                # It tells pip to install the package located in the current directory (.) in "editable" mode. It is often used to include the local project source code in the environment.
