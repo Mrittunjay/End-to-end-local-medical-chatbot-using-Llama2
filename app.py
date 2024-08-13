@@ -77,6 +77,18 @@ PINECONE_INDEX_NAME = os.environ.get('PINECONE_INDEX_NAME')
 def index():
     return render_template('chatbot.html')
 
+@app.route("/ask", methods=["GET", "POST"])
+def bot():
+    query = request.form["messageText"]
+    input = query
+    print(input)
+    # result = qa_obj.invoke({"query": user_input})
+    # print("Bot-response:", result["result"])
+    # return str(result["result"])
+    # return str(input)
+    return jsonify({"Result": "Coming Soon"})
+
+
 # Initializing flask
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080, debug=True)
