@@ -64,7 +64,7 @@
                 <div class="col-md-4 col-md-offset-4">
                     <div id="chatPanel" class="panel panel-info">
                         <div class="panel-heading">
-                            <strong><span class="fa fa-user-md fa-3x"></span> Ask me your general medical query (You: Green / Bot: White) </strong>
+                            <strong><span class="fa fa-user-md fa-3x"></span>  Ask me your general medical query (You: Green / Bot: White) </strong>
                         </div>
                         <div class="panel-body fixed-panel">
                             <ul class="media-list">
@@ -146,18 +146,19 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "/ask",
+                    url: "/bot",
                     data: $(this).serialize(),
                     success: function(response) {
                         $('#messageText').val('');
+                        var answer = response.result
                         // var answer = response.answer;
-                        var answer = "Coming soon"
+                        // var answer = "Coming soon"
                         const chatPanel = document.getElementById("chatPanel");
                         $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div style = "color : white" class="media-body">' + answer + '<hr/></div></div></div></li>');
                         $(".fixed-panel").stop().animate({ scrollTop: $(".fixed-panel")[0].scrollHeight}, 1000);
                         
                         msg.text = answer;
-                        speechSynthesis.speak(msg);
+                        // speechSynthesis.speak(msg);
                     },
                     error: function(error) {
                         console.log(error);

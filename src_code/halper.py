@@ -1,6 +1,9 @@
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
+# from langchain.document_loaders import PyPDFLoader, DirectoryLoader
+from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+# from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 
 
@@ -61,7 +64,7 @@ def get_hugging_face_embeddings():
 
 
 # Function to create a vector store in pinecone
-def get_pinecone_vectorestore(doc_chunks, embedding, index_name):
+def get_pinecone_vectorestore(doc_chunks, embedding, index_name, pc):
     """
     Create or retrive a Pinecone vector store based on the provided index name.
     
