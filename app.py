@@ -59,18 +59,18 @@ chain_type_kwargs = {"prompt": prompt_template}
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f"Model running on {device}")
 # Instantiate llama-2 llm model
-llm = CTransformers(model="model\llama-2-7b-chat.ggmlv3.q4_0.bin",
-                    model_type="llama",
-                    device=device,
-                    config={'max_new_tokens':400,
-                            'temperature': 0.5}
-                    )
-# llm = CTransformers(model="model\llama-2-7b-chat.ggmlv3.q2_K.bin",
+# llm = CTransformers(model="model\llama-2-7b-chat.ggmlv3.q4_0.bin",
 #                     model_type="llama",
 #                     device=device,
-#                     config={'max_new_tokens':200,
-#                             'temperature': 0.3}
+#                     config={'max_new_tokens':400,
+#                             'temperature': 0.5}
 #                     )
+llm = CTransformers(model="model\llama-2-7b-chat.ggmlv3.q2_K.bin",
+                    model_type="llama",
+                    device=device,
+                    config={'max_new_tokens':200,
+                            'temperature': 0.3}
+                    )
 
 # Creating question-ans obj
 qa_obj = RetrievalQA.from_chain_type(

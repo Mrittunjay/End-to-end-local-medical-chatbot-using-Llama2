@@ -5,3 +5,6 @@ model: llama-2-7b-chat.ggmlv3.q4_0.bin
 
 # To use Llama-2 2 bit version download from following location
 https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q2_K.bin
+
+# Or the 2 bit model can be downloaded from kaggle:
+https://www.kaggle.com/datasets/lorentzyeung/llama-7b-ggmlv3-q2-k-bin

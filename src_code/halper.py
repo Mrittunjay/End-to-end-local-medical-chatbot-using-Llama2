@@ -43,7 +43,7 @@ def get_text_chunks(data):
     """
     # Initialize the text splitter class
     extracted_chunks = RecursiveCharacterTextSplitter(
-        chunk_size=500,         # Size of each chunk (number of characters)
+        chunk_size=300,         # Size of each chunk (number of characters)
         chunk_overlap=30,       # Number of characters to overlap between consecutive chunks.
     )
     # Get the split text/chunks using split_documents
@@ -80,8 +80,10 @@ def get_pinecone_vectorestore(doc_chunks, embedding, index_name, pc):
     vector_details = pc.Index(index_name).describe_index_stats()
     print(vector_details)
     if vector_details['total_vector_count'] == 0:
+        print("\nLoading new vectors to vector DB ...\n")
         vectorstore = PineconeVectorStore.from_documents(doc_chunks, embedding=embedding, index_name=index_name)
     else:
+        print("\nVectors already exists in vector DB, skipping upsert\n")
         vectorstore = PineconeVectorStore(index_name=index_name, embedding=embedding)
     return vectorstore
 
