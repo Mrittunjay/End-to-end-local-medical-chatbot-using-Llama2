@@ -28,12 +28,15 @@ python template.py
 ```
 
 ### Create a Pinecone account on https://app.pinecone.io/ 
-## Now create a pinecone api key and add it to .env file, also provide a name for the pinecone instance as follows,
-## For the first time the code will create a pinecode instance with the index name that you have provided, and update the chunk vectors to the vector-DB (This will take quite some time during the first run)
+## Now create a pinecone api key and add it to .env file, also provide a name for the pinecone instance as follows:
 Example: 
 PINECONE_API_KEY = "00000000-0000-00cd-ab00-000000000000"
 
 PINECONE_INDEX_NAME = "example_index_name"
+
+
+## For the first time the code will create a pinecode instance with the index name that you have provided, and update the chunk vectors to the vector-DB (This will take quite some time during the first run)
+
 
 ### Download the required model .bin files and place in the model folder.
 ## For more information and links refer to model/instruction.txt file. 
