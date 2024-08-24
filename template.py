@@ -8,9 +8,9 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s)')
 
 list_dir = [
-    "src/__init__.py",
-    "src/halper.py",
-    "src/prompt.py",
+    "src_code/__init__.py",
+    "src_code/halper.py",
+    "src_code/prompt.py",
     ".env",
     "setup.py",
     "app.py",

@@ -2,7 +2,7 @@
 https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
 model: llama-2-7b-chat.ggmlv3.q4_0.bin
 
-
+# The 2 bit model is comparatively faster so you can use the 2 bit model to decrease the response time. 
 # To use Llama-2 2 bit version download from following location
 https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q2_K.bin
 

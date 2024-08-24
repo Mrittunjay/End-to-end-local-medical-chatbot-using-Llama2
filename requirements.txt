@@ -9,4 +9,5 @@ google-api-core     # Used for api request and response handling
 protoc_gen_openapiv2    # It’s part of the grpc-gateway project, which is used to expose gRPC services as RESTful APIs. Used for pinecone api.
 grpcio              # The project uses gRPC for communication between services or components, grpcio provides the necessary tools and protocols to implement and manage these communications.
 python-dotenv       # Used for accessing the secret key(for pinecone) from .env file
+pypdf               # Python library for working with PDF files.
 -e .                # It tells pip to install the package located in the current directory (.) in "editable" mode. It is often used to include the local project source code in the environment.
